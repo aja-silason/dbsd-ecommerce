@@ -24,6 +24,8 @@ export const ProductContent = ({title, products, openProductSecond, product, han
 
     const width = useWindowWidth();
 
+    if(width == null) return null;
+
     return (
         <div>
             <h2 className="mx-[2em] font-semibold lg:text-[24px] sm:text-[19px]">{title}</h2>
