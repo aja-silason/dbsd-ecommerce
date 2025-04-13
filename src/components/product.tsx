@@ -6,6 +6,7 @@ import { ProductCard } from "./card/product-card";
 import { ProductLess } from "./card/productless-card";
 import { ProductContent } from "./product-content/products";
 import { SearchInput } from "./input/search-product";
+import { useWindowWidth } from "@/hook/behavioral/useResponsivity";
 
 type ProductType = {
     id: number;
@@ -186,17 +187,19 @@ export function Product() {
         },
     ];
 
+    const width = useWindowWidth()
+
     return (
         <>
             <div className="mt-36">
                 <h1 className="font-semibold ml-10 lg:text-[22px] sm:text-[19px] text-black">Categorias De Produtos</h1>
 
-                <div className="tabs mt-7 ml-10 flex flex-wrap gap-4 justify-between">
+                <div className={`tabs mt-7 ${width >= 850 ? 'px-[4em]' : 'px-[2em]'} flex flex-wrap gap-4 justify-between`}>
              
                     <div className="flex flex-wrap gap-5 w-full">
             
                         {objectMaterial.map((item) => (
-                            <button key={item.id} className={` flex flex-row gap-4 pt-4 rounded-[15px] h-[60px] justify-center px-4 py-auto text-[14px] font-medium ${activeTab === item?.id ? "active" : ""}`} style={{ background: `${item?.background}`, color:`${ item?.color}`}}
+                            <button key={item.id} className={` flex flex-row gap-[.5em] rounded-[15px] justify-start items-center p-[1em] py-auto text-[14px] font-medium ${activeTab === item?.id ? "active" : ""}`} style={{ background: `${item?.background}`, color:`${ item?.color}`}}
                                 onClick={() => handleTabChange(item?.id)} >
                               {item.svg}
                                 <span className="mt-1">{item?.name}</span>
