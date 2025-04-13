@@ -31,11 +31,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="DBSD Vendas" />
-        <meta name="author" content="Pedro Osório" />
+        <meta name="author" content="Pedro Osório && Anania Augusto" />
         <meta name="keywords" content="DBSD, compras, produtos, vendas, materiais, limpeza, cozinha, ecommerce" />
-        <meta property="og:title" content="Baxtter Corporation" />
+        <meta property="og:title" content="DBDS Comercio e Prestação de Serviços" />
         <meta property="og:description" content="DBSD é a empresa que oferece para você as melhores soluções em termos de produtos de limpeza e entre outros materiais diversos, aproveite já e acesse o nosso site." />
-        <meta property="og:url" content="https://ecommerce-neon-theta.vercel.app/" />
+        <meta property="og:url" content="https://e-dbsd.vercel.app/" />
         <meta property="og:type" content="website" />
       </head>
       <body className={`antialiased`}  >
