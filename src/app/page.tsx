@@ -17,6 +17,7 @@ import Image from "next/image"
 import { motion, useInView } from "framer-motion";
 import {  useRef } from "react";
 import { MainBannerCarousel } from "@/components/carousel/main-banner";
+import { ContentValueCard } from "@/components/card/content-values-card";
 export default function Home() {
 
 
@@ -43,6 +44,33 @@ export default function Home() {
   const ref4 = useRef(null);
   const isInView4 = useInView(ref4, { once: true });
 
+  const contentValueData = [
+    {
+      id: 1,
+      icon: '/entrega.svg',
+      title: 'ENTREGA MAIS RÁPIDA',
+      description: 'Entrega em 24/H sobre confirmação de pagamento em transferência ou depósito bancário.'
+    },
+    {
+      id: 2,
+      icon: '/trop.svg',
+      title: 'RETORNO EM 24 HORAS',
+      description: 'As devoluções são feitas apenas sobre defeitos de fábrica. As devoluções não poderão ser efectuadas 24 horas após a data de compra. Os artigos e as embalagens a devolver terão de estar em boas condições. Sujeito a desconto de 12% referentes despesas bancarias e custos administrativos.'
+    },
+    {
+      id: 3,
+      icon: '/pagamento.svg',
+      title: 'PAGAMENTO SEGURO',
+      description: 'Seu dinheiro está seguro'
+    },
+    {
+      id: 4,
+      icon: '/music.svg',
+      title: 'SUPORTE DE 24 HORAS POR <br /> DIA, 7 DIAS POR SEMANA',
+      description: 'Contato/mensagem ao vivo'
+    },
+  ]
+
 
 
   return (
@@ -59,71 +87,13 @@ export default function Home() {
         variants={variant}
       > 
 
-      <div className="p-7 justify-center mx-auto flex flex-wrap gap-24 mt-2 border border-[#e4e7e9]">
-
-        <aside className="flex flex-row gap-4 md:border-r md:pr-24">
-
-            <div className="flex flex-col gap-2 w-[240px] ">
-
-              <Image
-                src="/entrega.svg"
-                width={40}
-                height={40}
-                className=""
-                alt="imagem de entrega"
-              /><h1 className="font-medium text-[14px]">ENTREGA MAIS RÁPIDA</h1>
-              <span className="font-normal text-[14px] text-justify">Entrega em 24/H sobre confirmação de pagamento em transferência ou depósito bancário.</span>
-          </div>
-        </aside>
- 
-        <aside className="flex flex-row gap-4 md:border-r md:pr-24">
-
-          <div className="flex flex-col gap-2 w-[240px]">
-
-              <Image
-                src="/trop.svg"
-                width={40}
-
-                className="-mt-4"
-                height={40}
-                alt="imagem de entrega"
-              />
-              <h1 className="font-medium text-[14px]">RETORNO EM 24 HORAS</h1>
-              <span className="font-normal text-[14px] text-justify">
-                As devoluções são feitas apenas sobre defeitos de fábrica. As devoluções não poderão ser efectuadas 24 horas após a data de compra.
-                Os artigos e as embalagens a devolver terão de estar em boas condições.
-                Sujeito a desconto de 12% referentes despesas bancarias e custos administrativos.
-              </span>
-          </div>
-        </aside>
-        <aside className="flex flex-row gap-4 md:border-r md:pr-24">
-
-            <div className="flex flex-col gap-2">
-              <Image
-                src="/pagamento.svg"
-                width={40}
-                height={40}
-                className="-mt-4"
-                alt="imagem de entrega"
-              />
-              <h1 className="font-medium text-[14px]">PAGAMENTO SEGURO</h1>
-          <span className="font-normal text-[14px]">Seu dinheiro está seguro</span>
-          </div>
-        </aside>
-
-        <aside className="flex flex-row gap-4 "> 
-            <div className="flex flex-col gap-2">
-              <Image
-                src="/music.svg"
-                width={40}
-                height={40}
-                className="-mt-4"
-                alt="imagem de entrega"
-              />
-              <h1 className="font-medium text-[14px]">SUPORTE DE 24 HORAS POR <br /> DIA, 7 DIAS POR SEMANA</h1>
-            <span className="font-normal text-[14px]">Contato/mensagem ao vivo</span>
-          </div>
-        </aside>
+      <div className="p-7 justify-center mx-auto flex flex-wrap mt-2 border border-[#e4e7e9]">
+        
+        {
+          contentValueData?.map((content) => (
+            <ContentValueCard icon={content?.icon} title={content?.title} description={content?.description} key={1}/>
+          ))
+        }
 
       </div>
 
