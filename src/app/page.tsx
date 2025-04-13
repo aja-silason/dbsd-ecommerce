@@ -16,6 +16,7 @@ import Image from "next/image"
 
 import { motion, useInView } from "framer-motion";
 import {  useRef } from "react";
+import { MainBannerCarousel } from "@/components/carousel/main-banner";
 export default function Home() {
 
 
@@ -47,18 +48,9 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className="cover">
-        <div className="back">
-          <div className="back2">
-            <h1 className=" text-white font-bold xl:text-5xl  mf:text-4xl text-2xl">
-              Suas compras na DBSD é nossa prioridade. Entregas realizadas menos de 24hr sobre confirmação de pagamento.
-            </h1>
-            <div className=" text-white mf:text-lg xl:text-xl font-normal md:base">
-              Sua compra te esperando em um ponto de coleta conveniente.
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <MainBannerCarousel />
+
       <motion.div
         ref={ref0}
         initial="initial"
@@ -69,9 +61,7 @@ export default function Home() {
 
       <div className="p-7 justify-center mx-auto flex flex-wrap gap-24 mt-2 border border-[#e4e7e9]">
 
-
         <aside className="flex flex-row gap-4 md:border-r md:pr-24">
-
 
             <div className="flex flex-col gap-2 w-[240px] ">
 
@@ -85,11 +75,8 @@ export default function Home() {
               <span className="font-normal text-[14px] text-justify">Entrega em 24/H sobre confirmação de pagamento em transferência ou depósito bancário.</span>
           </div>
         </aside>
-
-
  
         <aside className="flex flex-row gap-4 md:border-r md:pr-24">
-
 
           <div className="flex flex-col gap-2 w-[240px]">
 
@@ -110,7 +97,6 @@ export default function Home() {
           </div>
         </aside>
         <aside className="flex flex-row gap-4 md:border-r md:pr-24">
-
 
             <div className="flex flex-col gap-2">
               <Image

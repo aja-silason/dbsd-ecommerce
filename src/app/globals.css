@@ -28,7 +28,7 @@ body {
   width: 100%; 
   font-weight: 500;
   height: 100vh;
- background-image: url('../../public/cover.png');
+  background-image: url('../../public/cover.png');
   background-size: cover;
   background-position: center;
 }
