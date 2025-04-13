@@ -15,6 +15,8 @@ export const ProductCard = ({onClick, data}: props) => {
 
     const width = useWindowWidth();
 
+    if(width == null) return null;
+
     return (
         <button key={data.id} onClick={() => onClick(data)} className={`card border-[#e4e7e9] ${width >=850 ? 'sx:w-[200px] md:w-[300px]' : 'w-full'}  gap-3 flex flex-col border  rounded-[8px] p-[1em] transition-transform duration-300 hover:scale-110 justify-between`}>
             <Image alt={data.alt} src={data.srcImage} width={250} height={180} className="mx-auto h-[180px] w-[250px] object-cover"/>

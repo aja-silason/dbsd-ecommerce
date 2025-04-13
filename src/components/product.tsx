@@ -189,6 +189,8 @@ export function Product() {
 
     const width = useWindowWidth()
 
+    if(width == null) return null;
+
     return (
         <>
             <div className="mt-36">
