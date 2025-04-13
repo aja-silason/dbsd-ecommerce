@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import "../../app/globals.css"
 import image1 from "../../../public/cover.png"
+import image2 from "../../../public/backgroundimage2.jpg"
 
 
-const images = [image1, image1, image1];
+const images = [image1, image2];
 
 export const MainBannerCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -30,7 +31,7 @@ export const MainBannerCarousel = () => {
       <div className="back">
           <div className="back2 flex flex-col gap-[1em]">
             <h1 className=" text-white font-bold xl:text-5xl  mf:text-4xl text-2xl">
-              Suas compras na DBSD é nossa prioridade. Entregas realizadas menos de 24hr sobre confirmação de pagamento.
+            Na DBSD, sua compra é a nossa prioridade! Entregamos em até 24 horas após a confirmação do pagamento.
             </h1>
             <h2 className=" text-white mf:text-lg xl:text-xl font-normal md:base">
               Sua compra te esperando em um ponto de coleta conveniente.
