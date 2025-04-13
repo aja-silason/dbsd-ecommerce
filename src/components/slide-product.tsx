@@ -15,7 +15,7 @@ type ProductType = {
     price: number;
 };
 
-export function Product2() {
+export function SlideProduct() {
     const { openProductFirst, handleClickFirst } = useZustand();
     const [product, setProduct] = useState<ProductType>({
         id: 0,

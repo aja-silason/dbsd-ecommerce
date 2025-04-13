@@ -8,7 +8,7 @@ import { Footer } from "../components/footer/footer";
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react";
-import { Product2 } from "../components/product2";
+import { SlideProduct } from "../components/slide-product";
 
 import { Publicity } from "../components/publicity"
 import { PublicityProductSecond } from "../components/publicity2";
@@ -182,7 +182,7 @@ export default function Home() {
           transition={{ duration: 0.2, delay: 0 }}
           variants={variant}
         > 
-          <Product2 />
+          <SlideProduct />
         </motion.div>
 
       </div>
