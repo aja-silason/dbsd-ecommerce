@@ -49,7 +49,7 @@ export default function Home() {
       id: 1,
       icon: '/entrega.svg',
       title: 'ENTREGA MAIS RÁPIDA',
-      description: 'Entrega em 24/H sobre confirmação de pagamento em transferência ou depósito bancário.'
+      description: 'Entrega em 24/H sobre confirmação de pagamento em transferência ou depósito bancário, excepto feriados e finais de semana(Sábado e Domingo).'
     },
     {
       id: 2,
@@ -79,65 +79,32 @@ export default function Home() {
 
       <MainBannerCarousel />
 
-      <motion.div
-        ref={ref0}
-        initial="initial"
-        animate={isInView0 ? "animate" : "initial"}
-        transition={{ duration: 0.2, delay: 0 }}
-        variants={variant}
-      > 
+      <motion.div ref={ref0} initial="initial" animate={isInView0 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }} variants={variant}> 
+        <div className="p-7 justify-center my-[.5em] overflow-hidden flex flex-wrap border border-[#e4e7e9]">
+          
+          {
+            contentValueData?.map((content) => (
+              <ContentValueCard icon={content?.icon} title={content?.title} description={content?.description} key={1}/>
+            ))
+          }
 
-      <div className="p-7 justify-center mx-auto flex flex-wrap mt-2 border border-[#e4e7e9]">
-        
-        {
-          contentValueData?.map((content) => (
-            <ContentValueCard icon={content?.icon} title={content?.title} description={content?.description} key={1}/>
-          ))
-        }
-
-      </div>
-
+        </div>
       </motion.div>
-      <motion.div
-        ref={ref1}
-        initial="initial"
-        animate={isInView1 ? "animate" : "initial"}
-        transition={{ duration: 0.2, delay: 0 }}
-        variants={variant}
-      > 
-      <Product />
 
-
+      <motion.div ref={ref1} initial="initial" animate={isInView1 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }} variants={variant}> 
+        <Product />
       </motion.div>
-      <motion.div
-        ref={ref2}
-        initial="initial"
-        animate={isInView2 ? "animate" : "initial"}
-        transition={{ duration: 0.2, delay: 0 }}
-        variants={variant}
-      > 
+
+      <motion.div  ref={ref2} initial="initial" animate={isInView2 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }}variants={variant}> 
         <Publicity />
-
       </motion.div>
     
       <div className="flex flex-col md:flex-row gap-8 mx-auto ">
-          <motion.div
-            ref={ref3}
-            initial="initial"
-            animate={isInView3 ? "animate" : "initial"}
-            transition={{ duration: 0.2, delay: 0 }}
-            variants={variant}
-          >
-            <PublicityProductSecond />
-          </motion.div>
-
-        <motion.div
-          ref={ref4}
-          initial="initial"
-          animate={isInView4 ? "animate" : "initial"}
-          transition={{ duration: 0.2, delay: 0 }}
-          variants={variant}
-        > 
+        <motion.div ref={ref3} initial="initial" animate={isInView3 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }} variants={variant} >
+          <PublicityProductSecond />
+        </motion.div>
+        
+        <motion.div ref={ref4} initial="initial" animate={isInView4 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }} variants={variant}> 
           <SlideProduct />
         </motion.div>
 
