@@ -11,9 +11,11 @@ import { CookSVG } from "./svg/cook";
 import { IluminationSVG } from "./svg/ilumination";
 import {  ManualToolsSVG } from "./svg/manualtools";
 import { AccesoryToolsSVG } from "./svg/acessorytools";
-import { HigieneAndSavitySVG } from "./svg/cozinha copy 3";
-import { BatterySVG } from "./svg/cook copy 2";
-import { ElectronicsSVG } from "./svg/cook copy";
+import { HigieneAndSavitySVG } from "./svg/higieneandsavity";
+import { CleanAdictiveSVG } from "./svg/cleanadictive";
+import { ElectronicsSVG } from "./svg/electronic";
+import { GlueAndResistentsSVG } from "./svg/glueandresistents";
+import { BatterySVG } from "./svg/batery";
 
 type ProductType = {
     id: number;
@@ -31,8 +33,8 @@ export function Product() {
         {
             id: 1,
             name: "UTENSÍLIOS DE COZINHA",
-            background: "#DEFADE",
-            color: "#32cd32",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "category.svg",
             svg: <CookSVG/>
@@ -41,8 +43,8 @@ export function Product() {
         {
             id: 2,
             name: "ILUMINAÇÃO",
-            background: "#FEFFC1",
-            color: "#FFD700",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "luz.svg",
             svg: <IluminationSVG/>
@@ -51,8 +53,8 @@ export function Product() {
         {
             id: 3,
             name: "FERRAMENTAS ELÉTRICAS",
-            background: "#FFF5C5",
-            color: "#FFA500",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "electric.svg",
             svg: <ElectronicsSVG/>
@@ -61,8 +63,8 @@ export function Product() {
         {
             id: 4,
             name: "FERRAMENTAS MANUAIS",
-            background: "#FFF5C5",
-            color: "#FFA500",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "wrench.svg",
             svg: <ManualToolsSVG/>
@@ -70,8 +72,8 @@ export function Product() {
         }, {
             id: 5,
             name: "ACESSÓRIOS E CONSUMÍVEIS DE DESGASTE RÁPIDO",
-            background: "#E5E8FF",
-            color: "#00008B",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "recycle.svg",
             svg: <AccesoryToolsSVG/>
@@ -87,8 +89,8 @@ export function Product() {
         }, {
             id: 7,
             name: "BATERIA",
-            background: "#FFEAD3",
-            color: "#FF4500",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "setup.svg",
             svg: <BatterySVG/>
@@ -96,23 +98,20 @@ export function Product() {
         }, {
             id: 8,
             name: "COLA E RESISTENTE",
-            background: "#fffec1",
-            color: "#ffd700",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "luz.svg",
-            svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.5 13.678C3.5 9.49387 7.08079 5.35907 9.59413 2.97222C10.9591 1.67593 13.0409 1.67593 14.4059 2.97222C16.9192 5.35907 20.5 9.49387 20.5 13.678C20.5 17.7804 17.2812 22 12 22C6.71878 22 3.5 17.7804 3.5 13.678Z" stroke="#ffd700" stroke-width="1.5" />
-                <path d="M16 14C16 16.2091 14.2091 18 12 18" stroke="#ffd700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
+            svg: <GlueAndResistentsSVG/>
 
         }, {
             id: 9,
             name: "ADITIVO DE LIMPEZA",
-            background: "#F3E9FE",
-            color: "#8A2BE2",
+            background: "#D7F1FF",
+            color: "#1E90FF",
             description: "",
             image: "backpack.svg",
-            svg: <svg viewBox="0 0 64 64" width={24} xmlns="http://www.w3.org/2000/svg"> <g data-name="11" id="_11"> <path d="M38,21.07s0,0,0-.07V19h1a1,1,0,0,0,1-1V15h5a1,1,0,0,0,.86-.49,1,1,0,0,0,0-1L42.11,6.74A5.33,5.33,0,0,0,37.45,4H21a1,1,0,0,0-1,1H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h.1A21.33,21.33,0,0,1,16,17.86a21.77,21.77,0,0,1-3.83,9.56,1,1,0,0,0,.1,1.28A1,1,0,0,0,13,29a1,1,0,0,0,.56-.17A17.5,17.5,0,0,0,21,18.2,15.58,15.58,0,0,0,21.3,15H24v3a1,1,0,0,0,1,1h1v2a.88.88,0,0,0,.06.28,1,1,0,0,0-.16.2l-6,9.93A13.38,13.38,0,0,0,18,38.34v16.9A5.6,5.6,0,0,0,23.42,61H40.58A5.6,5.6,0,0,0,46,55.24V30.71A9.52,9.52,0,0,0,38,21.07ZM17,7h3v4H17Zm2,10.8a13.83,13.83,0,0,1-2.22,5.1A22.73,22.73,0,0,0,18,18.14,23.24,23.24,0,0,0,18.12,13h1A13.8,13.8,0,0,1,19,17.8ZM22,12V6H37.45a3.33,3.33,0,0,1,2.91,1.71L43.3,13H22Zm16,3v2H26V15Zm-2,4v1H28V19Zm-8.68,4h9.59C40.82,23,44,26.46,44,30.71V38H20a11.47,11.47,0,0,1,.84-4A.7.7,0,0,0,21,34h5a1,1,0,0,0,0-2H21.89l.67-1.11A1.06,1.06,0,0,0,23,31h5a1,1,0,0,0,0-2H23.7l.6-1H29a1,1,0,0,0,0-2H25.51ZM44,48H20V40H44ZM40.58,59H23.42A3.61,3.61,0,0,1,20,55.24V50H44v5.24A3.61,3.61,0,0,1,40.58,59Z" fill="#8A2BE2"  />  <path d="M42,37a1,1,0,0,0,1-1V31a1,1,0,0,0-2,0v5A1,1,0,0,0,42,37Z" fill="#8A2BE2" /> <path d="M42,51a1,1,0,0,0-1,1v2.34A1.67,1.67,0,0,1,39.34,56H38a1,1,0,0,0,0,2h1.34A3.66,3.66,0,0,0,43,54.34V52A1,1,0,0,0,42,51Z" fill="#8A2BE2"/> </g></svg>
+            svg: <CleanAdictiveSVG/>
         }
     ]
 
