@@ -6,7 +6,7 @@ import { forwardRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useZustand } from "../../context/zustand";
-import { UseCurrencyConverter } from "@/hook/utli/currency";
+import { UseCurrencyConverter } from "@/hook/util/currency";
 import { BuyLink } from "../button-link/buy-link";
 import { useWindowWidth } from "@/hook/behavioral/useResponsivity";
 

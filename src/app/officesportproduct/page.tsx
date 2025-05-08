@@ -21,16 +21,15 @@ const OfficeSportProduct = () => {
                     <div className="w-full">
                         <h1 className="md:text-[30px] sx:text-[22px] mf:text-[40px] text-[#191c1e]">Na DBSD, sua compra é a nossa prioridade! Entregamos em até 24 horas após a confirmação do pagamento.</h1>
 
-                        <label className="sx:text-[13px] md:text-[20px] text-[#191c1e]">
-                    Sua compra te esperando em um ponto de coleta conveniente, pronto para retirada. A poucos passos de você.  </label>
+                        <label className="sx:text-[13px] md:text-[20px] text-[#191c1e]">Sua compra te esperando em um ponto de coleta conveniente, pronto para retirada. A poucos passos de você.  </label>
                     </div>
 
                     <div className="sx:w-full md:w-[50%] sx:itens-center sx:mx-auto">
-                        <Image alt="star" src="about.svg" width={501} height={404} className="-mt-2" /> 
+                        <Image alt="star" src="/cadeira.jpg" width={501} height={404} className="-mt-2" /> 
                     </div>
 
                 </div>
-                <ProductOneCategory data={produc} title="Desport e Educação"/>
+                <ProductOneCategory data={produc} title="Escritório, Desporto e Educação"/>
             <Footer />
             <Analytics />
             <SpeedInsights />

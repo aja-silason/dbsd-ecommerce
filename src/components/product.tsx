@@ -110,12 +110,12 @@ export function Product() {
             svg: <CleanAdictiveSVG/>
         }, {
             id: 10,
-            name: "DESPORTO E EDUCAÇÃO",
+            name: "ESCRITÓRIO, DESPORTO E EDUCAÇÃO",
             background: "#D7F1FF",
             color: "#1E90FF",
             description: "",
-            image: "backpack.svg",
-            svg: <CleanAdictiveSVG/>
+            image: "luz.svg",
+            svg: <IluminationSVG/>
         }
     ]
 
