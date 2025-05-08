@@ -28,7 +28,7 @@ export const ProductContent = ({title, products, openProductSecond, product, han
 
     return (
         <div>
-            <h2 className="mx-[2em] font-semibold lg:text-[24px] sm:text-[19px]">{title}</h2>
+            <h2 className="mx-[2em] font-normal lg:text-[14pt] sm:text-[13pt]">{title}</h2>
             <div className={`${width >= 850 ? 'lg:ml-[4em] sm:ml-0 flex flex-wrap gap-10' : 'flex flex-col justify-center items-center gap-[2em] px-[2em]'} mt-[3em]`}>
                 {products.length > 0 ? products?.map((item: ProductType) => (
                     <ProductCard onClick={() => handleClickModal(item)} data={item} />

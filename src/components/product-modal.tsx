@@ -1,7 +1,6 @@
 "use client";
 import { UseSearch } from "@/hook/useSearch";  
 import { ProductContent } from "./product-content/products";
-import { SearchInput } from "./input/search-product";
 import { useWindowWidth } from "@/hook/behavioral/useResponsivity";
 import { CookSVG } from "./svg/cook";
 import { IluminationSVG } from "./svg/ilumination";
@@ -12,6 +11,7 @@ import { CleanAdictiveSVG } from "./svg/cleanadictive";
 import { ElectronicsSVG } from "./svg/electronic";
 import { GlueAndResistentsSVG } from "./svg/glueandresistents";
 import { BatterySVG } from "./svg/batery";
+import { SearchInputModal } from "./input/search-product-modal";
 
 type ProductType = {
     id: number;
@@ -23,7 +23,7 @@ type ProductType = {
 };
 
 
-export function Product() {
+export function ProductModalSearch() {
 
     const objectMaterial = [
         {
@@ -111,7 +111,6 @@ export function Product() {
         }
     ]
 
-    
     const { filterProductLuz, filterProduct, filterManualProducts, filterResistanceProducts, filterCleaningProducts, filterBatteryProducts, filterHygieneSafetyProducts,handleChangeSearch, filterElectricalProduct, filterAccessoryProducts, handleClickModal, handleTabChange, openProductSecond, product, activeTab } = UseSearch();
     
     const tabsConfig = [
@@ -169,7 +168,12 @@ export function Product() {
     return (
         <>
             <div className="">
-                <h1 className="font-[500] ml-10 lg:text-[14pt] sm:text-[13pt] text-black">Categorias De Produtos</h1>
+                
+                <div className="px-[2em]">
+                    <SearchInputModal handleSearch={handleChangeSearch}/>
+                </div>
+                
+                <h1 className="font-[500] mt-[1em] ml-10 lg:text-[14pt] sm:text-[13pt] text-black">Categorias De Produtos</h1>
 
                 <div className={`tabs mt-7 ${width >= 850 ? 'px-[4em]' : 'px-[2em]'} flex flex-wrap gap-4 justify-between`}>
              
@@ -183,7 +187,6 @@ export function Product() {
                             </button>
                         ))}
                     </div>
-                    <SearchInput handleSearch={handleChangeSearch}/>
                 </div>
 
                 <div className="tab-content mb-12 mt-10">

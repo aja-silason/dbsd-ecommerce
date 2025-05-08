@@ -1,19 +1,35 @@
 "use client"
 
-
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react";
 import { AccountMenu } from "../sidbar/side";
 import style from "./navBar.module.css"
+import { useZustand } from "@/context/zustand";
+import SearchModal from "@/components/modal/searchModal";
 
 export function NavBar() {
+
     const [isVisible, setIsVisible] = useState(true);
-const handleClick = ()=>{
-    setIsVisible(false)
-}
+    const handleClick = ()=>{
+        setIsVisible(false)
+    }
+    
+    const { openSearchModal, handleOpenSearchModal, openProductFirst, handleClickFirst } = useZustand();
+
+    console.log(openSearchModal)
+
     const phone = 936884337;
-const menssage = "Olá! Estou interessado(a) em um produto da sua empresa. Poderia me fornecer mais informações sobre ele, como preço, disponibilidade e características? Obrigado(a)!"
+
+    const handleOpenSearchModals = (value: boolean) => {
+        handleOpenSearchModal(value)
+        console.log(openSearchModal, value)
+    } 
+
+    const menssage = "Olá! Estou interessado(a) em um produto da sua empresa. Poderia me fornecer mais informações sobre ele, como preço, disponibilidade e características? Obrigado(a)!"
+
+    const [search, setSearch] = useState("");
+
     return(
       <>
       <div className=" h-[80px] w-full bg-[#fff] flex m-0 justify-between">
@@ -33,16 +49,15 @@ const menssage = "Olá! Estou interessado(a) em um produto da sua empresa. Poder
               <AccountMenu />
           </div>
 
-         <div className={`  ${style.container} mt-2 `}>
-                    
+         <div className={`  ${style.container} mt-2 flex`}>
+
+
               <div className="flex  flex-row gap-3 mr-5">
-                               
-             
-              <Link href="/" className="m-3 text-black ">Home</Link>
-              <Link href="/product" className="m-3 text- ">Produtos</Link>
-              
-                
-              
+
+                <SearchModal modal_title="Pesquisar produto" />
+
+                <Link href="/" className="m-3 text-black ">Home</Link>
+                <Link href="/product" className="m-3 text- ">Produtos</Link>
                     
               </div>
           </div>
