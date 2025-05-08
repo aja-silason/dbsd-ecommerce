@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from 'next/link';
+import {EnvelopeSimple, Phone} from "@phosphor-icons/react"
 
 export function Footer(){
 
@@ -35,11 +36,12 @@ export function Footer(){
                             <h3 className="sx:text-[13px] lg:text-[18px] text-[#fff]">Contactos </h3>
                             
                                 <Link  href={`https://wa.me/${phone}?text=${menssage}`} target="_blank" className=" text-[#fff] flex flex-row gap-3 text-[14px] ">
-                                    <Image alt="star" src="Phone.svg" width={20} height={20}/> (+244)&nbsp;936 884 337
+                                    <Phone size={20} height={20} width={20} color="#fff"/>
+                                    (+244)&nbsp;936 884 337
                                 </Link>
                                 
                                 <Link href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank" className=" text-[#fff]  flex flex-row gap-3  text-[14px]">
-                                    <Image alt="star" src="email.svg" width={20} height={20} />
+                                    <EnvelopeSimple size={20} height={20} width={20} color="#fff"/>
                                     dbsd.angola@gmail.com
                                 </Link>
                         </aside>
