@@ -15,20 +15,9 @@ export function NavBar() {
         setIsVisible(false)
     }
     
-    const { openSearchModal, handleOpenSearchModal, openProductFirst, handleClickFirst } = useZustand();
-
-    console.log(openSearchModal)
-
     const phone = 936884337;
 
-    const handleOpenSearchModals = (value: boolean) => {
-        handleOpenSearchModal(value)
-        console.log(openSearchModal, value)
-    } 
-
     const menssage = "Olá! Estou interessado(a) em um produto da sua empresa. Poderia me fornecer mais informações sobre ele, como preço, disponibilidade e características? Obrigado(a)!"
-
-    const [search, setSearch] = useState("");
 
     return(
       <>

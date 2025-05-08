@@ -12,6 +12,7 @@ import { ElectronicsSVG } from "./svg/electronic";
 import { GlueAndResistentsSVG } from "./svg/glueandresistents";
 import { BatterySVG } from "./svg/batery";
 import { SearchInputModal } from "./input/search-product-modal";
+import { ProductContentSearchModal } from "./product-content/products-search-modal";
 
 type ProductType = {
     id: number;
@@ -206,8 +207,8 @@ export function ProductModalSearch() {
                     {
                         tabsConfig?.map(({id, products, title}) => 
                             activeTab === id ? (
-                                <ProductContent handleClickModal={handleClickModal} openProductSecond={openProductSecond} product={product} products={products} title={title} key={id}/>
-                            ) : null
+                                <ProductContentSearchModal handleClickModalSearch={handleClickModal} openProductSecond={openProductSecond} product={product} products={products} title={title} key={id}/>
+                        ) : null
                     )}
                 </div>
             </div>
