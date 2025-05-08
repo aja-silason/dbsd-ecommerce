@@ -94,12 +94,8 @@ export default function Home() {
       <motion.div ref={ref1} initial="initial" animate={isInView1 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }} variants={variant}> 
         <Product />
       </motion.div>
-
-      <motion.div  ref={ref2} initial="initial" animate={isInView2 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }}variants={variant}> 
-        <Publicity />
-      </motion.div>
     
-      <div className="flex flex-col md:flex-row gap-8 mx-auto ">
+      <div className="flex px-[.5em] flex-col md:flex-row gap-8 mx-auto ">
         <motion.div ref={ref3} initial="initial" animate={isInView3 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }} variants={variant} >
           <PublicityProductSecond />
         </motion.div>
@@ -108,6 +104,9 @@ export default function Home() {
           <SlideProduct />
         </motion.div>
 
+        <motion.div  ref={ref2} initial="initial" animate={isInView2 ? "animate" : "initial"} transition={{ duration: 0.2, delay: 0 }}variants={variant}> 
+          <Publicity/>
+        </motion.div>
       </div>
 
       <Footer />

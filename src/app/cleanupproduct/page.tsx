@@ -5,11 +5,11 @@ import { Footer } from "../../components/footer/footer"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react";
 import { ProductOneCategory } from "@/components/card/product-onecategory";
-import { OfficeAndSportProduct } from "@/components/mook/officeandsport";
+import { cleaningProducts } from "@/components/mook/cleaning";
 
-const OfficeSportProduct = () => {
+const CleanupProduct = () => {
 
-    const produc = OfficeAndSportProduct;
+    const produc = cleaningProducts;
 
     return (
         <>
@@ -24,11 +24,11 @@ const OfficeSportProduct = () => {
                     </div>
 
                     <div className="sx:w-full md:w-[50%] sx:itens-center sx:mx-auto">
-                        <Image alt="star" src="/cadeira.jpg" width={501} height={404} className="-mt-2" /> 
+                        <Image alt="star" src="publicity.svg" width={501} height={404} className="-mt-2" /> 
                     </div>
 
                 </div>
-                <ProductOneCategory data={produc} title="Escritório, Desporto e Educação"/>
+                <ProductOneCategory data={produc} title="Productos de Limpeza"/>
             <Footer />
             <Analytics />
             <SpeedInsights />
@@ -38,4 +38,4 @@ const OfficeSportProduct = () => {
 }
 
 
-export default OfficeSportProduct;
+export default CleanupProduct;

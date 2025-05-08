@@ -118,7 +118,6 @@ export function Product() {
             svg: <IluminationSVG/>
         }
     ]
-
     
     const { filterProductLuz, filterProduct, filterManualProducts, filterResistanceProducts, filterCleaningProducts, filterBatteryProducts, filterHygieneSafetyProducts,handleChangeSearch, filterElectricalProduct, filterAccessoryProducts, filterSportAndEducationProducts, handleClickModal, handleTabChange, openProductSecond, product, activeTab } = UseSearch();
     

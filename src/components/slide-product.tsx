@@ -87,7 +87,7 @@ export function SlideProduct() {
                 <div className="tab-content flex flex-col justify-center items-center mb-[4em]">
                     <h2 className="text-[20px] font-semibold left-0 w-full mt-[3em] mb-[1em]">{current?.title}</h2>
 
-                    <div className={`px-[2em] sm:ml-0 flex flex-wrap justify-start gap-10 py-[4em] transition-opacity duration-700 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}>
+                    <div className={`px-[2em] sm:ml-0 flex flex-wrap justify-start gap-10 py-[4em] h-[70vh] overflow-hidden overflow-y-scroll scroll-smooth transition-opacity duration-700 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}>
                         {current?.items?.map((item) => (
                             <ProductCard key={item.id} onClick={() => handleClickModal(item)} data={item} />
                         ))}
