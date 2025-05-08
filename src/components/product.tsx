@@ -108,11 +108,19 @@ export function Product() {
             description: "",
             image: "backpack.svg",
             svg: <CleanAdictiveSVG/>
+        }, {
+            id: 10,
+            name: "DESPORTO E EDUCAÇÃO",
+            background: "#D7F1FF",
+            color: "#1E90FF",
+            description: "",
+            image: "backpack.svg",
+            svg: <CleanAdictiveSVG/>
         }
     ]
 
     
-    const { filterProductLuz, filterProduct, filterManualProducts, filterResistanceProducts, filterCleaningProducts, filterBatteryProducts, filterHygieneSafetyProducts,handleChangeSearch, filterElectricalProduct, filterAccessoryProducts, handleClickModal, handleTabChange, openProductSecond, product, activeTab } = UseSearch();
+    const { filterProductLuz, filterProduct, filterManualProducts, filterResistanceProducts, filterCleaningProducts, filterBatteryProducts, filterHygieneSafetyProducts,handleChangeSearch, filterElectricalProduct, filterAccessoryProducts, filterSportAndEducationProducts, handleClickModal, handleTabChange, openProductSecond, product, activeTab } = UseSearch();
     
     const tabsConfig = [
         {
@@ -160,6 +168,11 @@ export function Product() {
           title: "Melhores Produtos de Aditivo de Limpeza",
           products: filterCleaningProducts,
         },
+        {
+            id: 10,
+            title: "Melhores Produtos Desportista e Escolares",
+            products: filterSportAndEducationProducts,
+          },
     ];
 
     const width = useWindowWidth()
