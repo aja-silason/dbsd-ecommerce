@@ -5,7 +5,6 @@ import Link from "next/link"
 import { useState } from "react";
 import { AccountMenu } from "../sidbar/side";
 import style from "./navBar.module.css"
-import { useZustand } from "@/context/zustand";
 import SearchModal from "@/components/modal/searchModal";
 
 export function NavBar() {
@@ -21,14 +20,14 @@ export function NavBar() {
 
     return(
       <>
-      <div className=" h-[80px] w-full bg-[#fff] flex m-0 justify-between">
+      <div className="w-full bg-[#fff] py-[.5em] flex items-center justify-between">
           <div className="">
               <Link href="/">
                   <Image
                       src="/logo2.jpeg"
                       alt="logo"
-                      width={152}
-                      height={62}
+                      width={122}
+                      height={42}
                       className="-mt-7"
                   />
               </Link>
@@ -47,6 +46,7 @@ export function NavBar() {
 
                 <Link href="/" className="m-3 text-black ">Home</Link>
                 <Link href="/product" className="m-3 text- ">Produtos</Link>
+                <Link href="/about" className="m-3 text- ">Sobre Nós</Link>
                     
               </div>
           </div>

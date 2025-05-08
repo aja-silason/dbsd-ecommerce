@@ -1,8 +1,6 @@
 import { useWindowWidth } from "@/hook/behavioral/useResponsivity";
 import { ProductCard } from "../card/product-card"
 import { ProductLess } from "../card/productless-card"
-import { ModalProductFirst } from "../modal/productModalFirst"
-import { ModalProductFirstSearch } from "../modal/productModalFirstSearch";
 import Infos from "../modal/infos";
 
 type ProductType = {
@@ -22,7 +20,7 @@ type props = {
     handleClickModalSearch: any
 }
 
-export const ProductContentSearchModal = ({title, products, openProductSecond, product, handleClickModalSearch}: props) => {
+export const ProductContentSearchModal = ({title, products}: props) => {
 
     const width = useWindowWidth();
 

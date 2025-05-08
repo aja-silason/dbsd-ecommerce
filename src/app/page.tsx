@@ -12,7 +12,6 @@ import { SlideProduct } from "../components/slide-product";
 
 import { Publicity } from "../components/publicity"
 import { PublicityProductSecond } from "../components/publicity2";
-import Image from "next/image"
 
 import { motion, useInView } from "framer-motion";
 import {  useRef } from "react";
