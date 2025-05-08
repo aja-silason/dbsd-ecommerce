@@ -33,8 +33,9 @@ export function NavBar() {
               </Link>
           </div>
 
-          <div className="h:flex absolute right-1 mf:hidden mt-4 float-right focus:outline-none">
-              <AccountMenu />
+          <div className="h:flex absolute flex right-1 mf:hidden mt-4 float-right focus:outline-none">
+                <SearchModal modal_title="Pesquisar produto" />
+                <AccountMenu />
           </div>
 
          <div className={`  ${style.container} mt-2 flex`}>

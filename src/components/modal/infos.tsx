@@ -6,8 +6,6 @@ import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
 import Image from "next/image";
 import { useWindowWidth } from "@/hook/behavioral/useResponsivity";
-import { UseSearch } from "@/hook/useSearch";
-import { DialogActions } from "@mui/material";
 import { BuyLink } from "../button-link/buy-link";
 import { UseCurrencyConverter } from "@/hook/util/currency";
 
@@ -41,18 +39,12 @@ export default function Infos({children, data}: modalProps) {
 
         handleClose();
     };
-    const { filterProductLuz, filterProduct, filterManualProducts, filterResistanceProducts, filterCleaningProducts, filterBatteryProducts, filterHygieneSafetyProducts,handleChangeSearch, filterElectricalProduct, filterAccessoryProducts, filterSportAndEducationProducts, handleClickModal, handleTabChange, openProductSecond, product, activeTab } = UseSearch();
 
+    const {convertCurrency} = UseCurrencyConverter()
 
-      const {convertCurrency} = UseCurrencyConverter()
+    const width = useWindowWidth()
 
-        const width = useWindowWidth()
-    
-        if(width == null) return null;
-
-        console.log(data)
-    
-
+    if(width == null) return null;
     
     return (
         <React.Fragment>
@@ -70,7 +62,7 @@ export default function Infos({children, data}: modalProps) {
                 PaperProps={{
                     style: {
                         width: "80%",
-                        maxWidth: "30%",
+                        maxWidth: width >= 850 ? "30%" : "100%",
                         height: "55%",
                         borderRadius: "8px",
                         maxHeight: "80%",

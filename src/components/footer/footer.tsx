@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import Link from 'next/link';
 import {EnvelopeSimple, Phone} from "@phosphor-icons/react"
@@ -16,7 +17,7 @@ export function Footer(){
                 borderImageSlice: 1
             }}>
 
-                <div className="flex gap-10   border border-t-gray-100 shadow-lg  sx:flex-col md:flex-row justify-between mx-auto px-24 py-32">
+                <div className="flex gap-10 shadow-lg  sx:flex-col md:flex-row justify-between mx-auto px-24 py-32">
 
                     <aside className="w-full text-[#fff] flex flex-col  ">
                         <Image alt="logo-footer" src="/footer_logo.jpg" width={352} height={8} className="-mt-24"/>

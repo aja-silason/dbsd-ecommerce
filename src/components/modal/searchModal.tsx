@@ -6,6 +6,7 @@ import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
 import Image from "next/image";
 import { ProductModalSearch } from "../product-modal";
+import { useWindowWidth } from "@/hook/behavioral/useResponsivity";
 
 
 const Transition = React.forwardRef(function Transition(
@@ -37,6 +38,10 @@ export default function SearchModal({modal_title}: modalProps) {
         handleClose();
     };
 
+    const width = useWindowWidth();
+
+    if(width == null) return null;
+
     
     return (
         <React.Fragment>
@@ -55,7 +60,7 @@ export default function SearchModal({modal_title}: modalProps) {
                 PaperProps={{
                     style: {
                         width: "100%",
-                        maxWidth: "70%",
+                        maxWidth: width >=850 ? "70%" : "100%",
                         height: "100%",
                         borderRadius: "8px",
                         maxHeight: "80%",
