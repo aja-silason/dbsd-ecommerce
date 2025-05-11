@@ -41,9 +41,9 @@ const About = () => {
 
                 <div className="sx:w-full md:w-[50%] sx:itens-center sx:mx-auto"><Image
                     alt="star"
-                    src="about.svg"
+                    src="/infoboard.jpg"
                     width={501}
-                    height={404}
+                    height={504}
                     className="-mt-2"
                 /> </div>
             </div>

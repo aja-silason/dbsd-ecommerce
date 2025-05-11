@@ -24,7 +24,7 @@ const ProductInfo = () => {
                 <div className="sx:w-full md:w-[50%] sx:itens-center sx:mx-auto">
                     <Image
                         alt="star"
-                        src="/infoboard.jpg"
+                        src="/deliver.jpg"
                         width={501}
                         height={404}
                         className="-mt-2"
