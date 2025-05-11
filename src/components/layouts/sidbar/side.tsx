@@ -91,7 +91,6 @@ export function AccountMenu() {
           sx: {
             overflow: "visible",
             width: "120%",
-            height: "40%",
             filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.3))",
             mt: 2,
             "& .MuiAvatar-root": {},

@@ -21,13 +21,15 @@ const ProductInfo = () => {
                    Sua compra te esperando em um ponto de coleta conveniente, pronto para retirada. A poucos passos de você.  </label>
                 </div>
 
-                <div className="sx:w-full md:w-[50%] sx:itens-center sx:mx-auto"><Image
-                    alt="star"
-                    src="about.svg"
-                    width={501}
-                    height={404}
-                    className="-mt-2"
-                /> </div>
+                <div className="sx:w-full md:w-[50%] sx:itens-center sx:mx-auto">
+                    <Image
+                        alt="star"
+                        src="/infoboard.jpg"
+                        width={501}
+                        height={404}
+                        className="-mt-2"
+                    />
+                </div>
             </div>
             <Product />
             <Footer />

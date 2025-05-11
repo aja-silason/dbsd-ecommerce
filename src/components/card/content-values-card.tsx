@@ -9,7 +9,7 @@ type props = {
 export const ContentValueCard = ({icon, title, description}: props) => {
     return (
         <aside className="flex p-[2em] flex-row gap-4 justify-center md:border-r ">
-            <div className="flex flex-col gap-2 w-[300px]">
+            <div className="flex flex-col gap-2 w-[230px]">
                 <Image
                 src={icon}
                 width={40}
