@@ -28,16 +28,36 @@ export function Product() {
     const objectMaterial = [
         {
             id: 1,
+            name: "FERRAMENTAS ELÉTRICAS",
+            background: "#D7F1FF",
+            color: "#1E90FF",
+            description: "",
+            image: "electric.svg",
+            svg: <ElectronicsSVG/>
+            
+        },
+        {
+            id: 2,
+            name: "FERRAMENTAS MANUAIS",
+            background: "#D7F1FF",
+            color: "#1E90FF",
+            description: "",
+            image: "wrench.svg",
+            svg: <ManualToolsSVG/>
+
+        },
+        {
+            id: 3,
             name: "UTENSÍLIOS DE COZINHA",
             background: "#D7F1FF",
             color: "#1E90FF",
             description: "",
             image: "category.svg",
             svg: <CookSVG/>
-
+            
         },
         {
-            id: 2,
+            id: 4,
             name: "ILUMINAÇÃO",
             background: "#D7F1FF",
             color: "#1E90FF",
@@ -47,25 +67,6 @@ export function Product() {
 
         },
         {
-            id: 3,
-            name: "FERRAMENTAS ELÉTRICAS",
-            background: "#D7F1FF",
-            color: "#1E90FF",
-            description: "",
-            image: "electric.svg",
-            svg: <ElectronicsSVG/>
-
-        },
-        {
-            id: 4,
-            name: "FERRAMENTAS MANUAIS",
-            background: "#D7F1FF",
-            color: "#1E90FF",
-            description: "",
-            image: "wrench.svg",
-            svg: <ManualToolsSVG/>
-
-        }, {
             id: 5,
             name: "ACESSÓRIOS E CONSUMÍVEIS DE DESGASTE RÁPIDO",
             background: "#D7F1FF",
@@ -123,22 +124,22 @@ export function Product() {
     
     const tabsConfig = [
         {
-          id: 1,
+          id: 3,
           title: "Produtos de Cozinha",
           products: filterProduct,
         },
         {
-          id: 2,
+          id: 4,
           title: "Melhores Produtos de Lâmpadas",
           products: filterProductLuz,
         },
         {
-          id: 3,
+          id: 1,
           title: "Melhores Ferramentas Elétricas",
           products: filterElectricalProduct,
         },
         {
-          id: 4,
+          id: 2,
           title: "Melhores Ferramentas Manuais",
           products: filterManualProducts,
         },
@@ -181,7 +182,7 @@ export function Product() {
     return (
         <>
             <div className="">
-                <h1 className="font-[500] ml-10 lg:text-[14pt] sm:text-[13pt] text-black">Categorias De Produtos</h1>
+                <h1 className="font-[400] ml-10 lg:text-[13pt] sm:text-[13pt] text-black">Categorias De Produtos</h1>
 
                 <div className={`tabs mt-7 ${width >= 850 ? 'px-[4em]' : 'px-[2em]'} flex flex-wrap gap-4 justify-between`}>
              
@@ -195,7 +196,6 @@ export function Product() {
                             </button>
                         ))}
                     </div>
-                    <SearchInput handleSearch={handleChangeSearch}/>
                 </div>
 
                 <div className="tab-content mb-12 mt-10">

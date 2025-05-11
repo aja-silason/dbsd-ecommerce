@@ -18,15 +18,23 @@ const About = () => {
                     <h1 className="md:text-[30px] sx:text-[22px] mf:text-[40px] text-[#191c1e]">Sobre a DBSD</h1>
 
                     <label className="sx:text-[12pt] md:text-[13pt] text-[#191c1e]">
-                        Na DBSD, acreditamos que uma experiência de compra eficiente e prática faz toda a diferença. Por isso, colocamos nossos clientes no centro de tudo o que fazemos. Nosso compromisso é garantir agilidade, confiança e comodidade em cada pedido realizado.
+                        A DBSD é uma empresa dinâmica, especializada na comercialização de ferramentas manuais, elétricas e utensílios profissionais. Trabalhamos com marcas reconhecidas pela sua qualidade e durabilidade, como Bosch, Yato, Flux, Tramontina e VITO, garantindo soluções confiáveis para profissionais e empresas de todos os setores.
                     </label>
                     
                     <label className="sx:text-[12pt] md:text-[13pt] text-[#191c1e]">
-                        Entregamos seus produtos com rapidez: após a confirmação do pagamento, o prazo de entrega é de até 24 horas. E para tornar o processo ainda mais conveniente, utilizamos pontos de coleta estrategicamente localizados, sempre próximos a você. Dessa forma, sua compra fica disponível para retirada com total praticidade e segurança, no horário que melhor se encaixar na sua rotina.
+                        Nosso modelo de negócio é focado no comércio digital, uma escolha estratégica que nos permite oferecer atendimento ágil, proximidade com o cliente e preços competitivos, com entregas rápidas em todo o país. Mantemos uma ampla gama de produtos em stock para entrega imediata, o que nos diferencia pela prontidão no serviço.
                         </label>
 
                     <label className="sx:text-[12pt] md:text-[13pt] text-[#191c1e]">
-                        Somos movidos pelo dinamismo e pela inovação, buscando sempre melhorar nossos serviços e atender às suas necessidades com excelência. Na DBSD, seu tempo é valorizado e sua satisfação é a nossa prioridade.
+                        Além do fornecimento de produtos, a DBSD também presta serviços de formação na área administrativa, com foco em gestão comercial, contabilidade e ferramentas de produtividade como o Primavera Software, ajudando negócios a crescer com mais organização e eficiência.
+                    </label>
+
+                    <label className="sx:text-[12pt] md:text-[13pt] text-[#191c1e]">
+                        Nosso compromisso é com o profissionalismo, a confiança e a inovação.
+                    </label>
+
+                    <label className="sx:text-[12pt] md:text-[13pt] text-[#191c1e]">
+                        💼 DBSD – Acelerando o sucesso com dinamismo.
                     </label>
 
                 </div>
